@@ -1,0 +1,20 @@
+<h1><%= @dept.category %></h1>
+
+<h4><%= "Description:" %><%=' '=%><%= @dept.description %></h4>
+<h4><%= "Manager:" %><%=' '=%><%= @dept.manager %></h4>
+<h4><%= "Seasonal?" %><%=' '=%><%= @dept.seasonal %> </h4>
+
+
+
+
+
+<p>What would you like to do?</p>
+
+<%= link_to 'Items', dept_items_path(@dept.id) %>
+<br />
+<%= link_to 'Edit Department', edit_dept_path(@dept) %>
+<br />
+<%= link_to 'Delete Department', dept_path(@dept.id), method: :delete %>
+<br />
+<br />
+<%= link_to "Back to Departments", depts_path%>

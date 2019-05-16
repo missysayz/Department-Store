@@ -1,0 +1,7 @@
+<h1>Department Store - Select a Category To View Description</h1>
+<%= link_to 'Create a New Department Category', new_dept_path %>
+<ul>
+  <% @depts.each do |dept| %>
+    <li><%= link_to dept.category, dept_path(dept.id) %></li>
+  <% end %>
+</ul>

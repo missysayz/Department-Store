@@ -1,0 +1,13 @@
+<h1><%= "Department:" %><%=' '%> <%= @dept.category%> </h1>
+<h3>Click Item To View Description:<h3>
+
+<ul>
+  <% @items.each do |item| %>
+    <li><%= link_to item.name, dept_item_path(@dept, item) %></li>
+  <% end %>
+</ul>
+<br />
+<%= link_to 'Create a new item', new_dept_item_path(@dept) %>
+<br />
+<%= link_to 'Back to Departments', depts_path %>
+

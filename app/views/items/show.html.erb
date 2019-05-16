@@ -1,0 +1,13 @@
+<h1><%= @dept.category%><%=': ' =%><%= @item.name %> </h1>
+
+<h4><%= "Description:" %><%=' '=%><%= @item.descr %></h4>
+<h4><%= "Price:" %><%=' '=%><%= @item.price %></h4>
+
+
+
+<br />
+<%= link_to 'Edit Item', edit_dept_item_path([@dept, @item]) %>
+<br />
+<%= link_to 'Delete Item', dept_item_path(@dept, @item), method: :delete %>
+<br />
+<%= link_to 'Back to Department Items', dept_items_path(@dept) %>

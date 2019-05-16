@@ -1,0 +1,17 @@
+<<h1><h1> <%= @dept.id ? "Edit Department" : "Create Department" %> </h1>
+<hr />
+<%= form_for @dept do |f| %>
+  <%= f.label :category %>
+  <%= f.text_field :category, required: true, autofocus: true %>
+  
+  <%= f.label :manager %>
+  <%= f.text_field :manager, required: true%>
+  
+  <%= f.label :description %> 
+  <%= f.text_area :description, required: true%>
+
+  <%= f.label :seasonal %>
+  <%= f.check_box :seasonal %>
+
+  <%= f.submit %>
+<% end %>
